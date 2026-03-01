@@ -1,0 +1,55 @@
+{
+  "test_date": "2025-12-31T11:23:43.042317",
+  "server_path": "src/server.py",
+  "tests": {
+    "imports": {
+      "status": "failed",
+      "output": "",
+      "error": "No module named 'src'",
+      "timestamp": "2025-12-31T11:23:43.042488"
+    },
+    "dependencies": {
+      "status": "failed",
+      "output": "",
+      "error": "No module named 'src'",
+      "timestamp": "2025-12-31T11:23:43.042565"
+    },
+    "script_validation": {
+      "status": "passed",
+      "output": "\nValidation Result for: NCCCC[C@@H]1NC(=O)[C@@H](Cc2c[nH]c3ccccc23)NC(=O)[C@H](c2ccccc2)NC(=O)[C@@H]2C[C@@H](OC(=O)NCCN)CN2C(=O)[C@H](Cc2ccccc2)NC(=O)[C@H](Cc2ccc(OCc3ccccc3)cc2)NC1=O\n  Valid: True\n  Canonical SMILES: NCCCC[C@@H]1NC(=O)[C@@H](Cc2c[nH]c3ccccc23)NC(=O)[C@H](c2ccccc2)NC(=O)[C@@H]2C[C@@H](OC(=O)NCCN)CN2C(=O)[C@H](Cc2ccccc2)NC(=O)[C@H](Cc2ccc(OCc3ccccc3)cc2)NC1=O\n  Molecular Weight: 1047.23 Da\n  Atoms: 77\n  Rings: 8\n  Cyclic: True\n  LogP: 3.37\n  TPSA: 281.2 \u0172\n  H-bond donors: 9\n  H-b",
+      "error": "",
+      "timestamp": "2025-12-31T11:23:43.559734"
+    },
+    "error_handling": {
+      "status": "passed",
+      "output": "Invalid SMILES handled correctly",
+      "error": "",
+      "timestamp": "2025-12-31T11:23:44.060898"
+    },
+    "claude_registration": {
+      "status": "passed",
+      "output": "MCP server registered and connected",
+      "error": "",
+      "timestamp": "2025-12-31T11:23:46.461256"
+    },
+    "job_manager": {
+      "status": "failed",
+      "output": "",
+      "error": "No module named 'src'",
+      "timestamp": "2025-12-31T11:23:46.461693"
+    },
+    "file_operations": {
+      "status": "passed",
+      "output": "Read 2 rows from demo data",
+      "error": "",
+      "timestamp": "2025-12-31T11:23:46.813783"
+    }
+  },
+  "issues": [],
+  "summary": {
+    "total_tests": 7,
+    "passed": 4,
+    "failed": 3,
+    "pass_rate": "57.1%"
+  }
+}

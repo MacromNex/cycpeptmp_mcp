@@ -1,0 +1,48 @@
+{
+  "_description": "Default configuration for all cyclic peptide MCP scripts",
+  "_version": "1.0.0",
+  "_created": "Step 5 - Script Extraction",
+
+  "general": {
+    "_description": "General settings for all scripts",
+    "verbose": true,
+    "timeout": 300,
+    "max_retries": 3
+  },
+
+  "validation": {
+    "_description": "Input validation settings",
+    "validate_smiles": true,
+    "canonicalize_input": true,
+    "skip_invalid": true
+  },
+
+  "molecular_properties": {
+    "_description": "Molecular property calculation settings",
+    "calculate_basic": true,
+    "calculate_descriptors": true,
+    "calculate_fingerprints": false
+  },
+
+  "output": {
+    "_description": "Default output settings",
+    "format": "csv",
+    "include_metadata": true,
+    "overwrite_existing": false
+  },
+
+  "performance": {
+    "_description": "Performance optimization settings",
+    "use_parallel": false,
+    "chunk_size": 100,
+    "cache_results": false
+  },
+
+  "paths": {
+    "_description": "Default file paths (relative to MCP root)",
+    "models": "models/",
+    "data": "examples/data/",
+    "config": "configs/",
+    "temp": "temp/"
+  }
+}

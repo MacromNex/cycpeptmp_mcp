@@ -1,0 +1,42 @@
+{
+  "_description": "Configuration for batch analysis of cyclic peptides",
+  "_source": "Extracted from examples/use_case_3_batch_analysis.py",
+
+  "similarity": {
+    "_description": "Molecular similarity calculation settings",
+    "threshold": 0.7,
+    "fingerprint": {
+      "type": "morgan",
+      "radius": 2,
+      "n_bits": 1024
+    }
+  },
+
+  "diversity": {
+    "_description": "Chemical diversity analysis settings",
+    "min_molecules": 2
+  },
+
+  "database": {
+    "_description": "Database comparison settings",
+    "default_path": "repo/cycpeptmp/data/CycPeptMPDB_Peptide_All.csv",
+    "enable_comparison": true,
+    "max_similar_per_query": 3
+  },
+
+  "statistics": {
+    "_description": "Statistical analysis settings",
+    "include_lipinski": true,
+    "include_molecular_properties": true,
+    "include_diversity_metrics": true
+  },
+
+  "output": {
+    "_description": "Output format and files",
+    "save_properties": true,
+    "save_summary": true,
+    "save_diversity": true,
+    "save_similarities": true,
+    "format": "csv"
+  }
+}

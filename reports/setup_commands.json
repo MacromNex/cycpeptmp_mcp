@@ -1,0 +1,12 @@
+{
+  "setup_commands": [
+    "(command -v mamba >/dev/null 2>&1 && mamba create -p ./env python=3.10 pip -y) || (command -v conda >/dev/null 2>&1 && conda create -p ./env python=3.10 pip -y) || (echo \"Warning: Neither mamba nor conda found, creating venv instead\" && python3 -m venv ./env)",
+    "./env/bin/pip install fastmcp loguru click pandas numpy tqdm",
+    "(command -v mamba >/dev/null 2>&1 && mamba install -p ./env -c conda-forge rdkit matplotlib-base pillow sqlalchemy -y) || (command -v conda >/dev/null 2>&1 && conda install -p ./env -c conda-forge rdkit matplotlib-base pillow sqlalchemy -y) || ./env/bin/pip install rdkit",
+    "./env/bin/pip install --force-reinstall --no-cache-dir fastmcp",
+    "(command -v mamba >/dev/null 2>&1 && mamba create -p ./env_py39 python=3.9 pip -y) || (command -v conda >/dev/null 2>&1 && conda create -p ./env_py39 python=3.9 pip -y) || (echo \"Warning: Creating fallback py39 env with venv\" && python3 -m venv ./env_py39)",
+    "./env_py39/bin/pip install numpy==1.25.0 pandas==1.4.4 torch==2.0.0",
+    "(command -v mamba >/dev/null 2>&1 && mamba install -p ./env_py39 -c conda-forge rdkit -y) || (command -v conda >/dev/null 2>&1 && conda install -p ./env_py39 -c conda-forge rdkit -y) || ./env_py39/bin/pip install rdkit",
+    "./env_py39/bin/pip install mordred"
+  ]
+}

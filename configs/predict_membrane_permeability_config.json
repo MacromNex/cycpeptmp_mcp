@@ -1,0 +1,46 @@
+{
+  "_description": "Configuration for membrane permeability prediction using CycPeptMP",
+  "_source": "Extracted from examples/use_case_1_predict_membrane_permeability.py",
+
+  "device": {
+    "_description": "Computing device settings",
+    "type": "auto",
+    "prefer_cuda": true
+  },
+
+  "cycpeptmp": {
+    "_description": "CycPeptMP pipeline configuration",
+    "config_path": "examples/data/CycPeptMP.json",
+    "fallback_config_path": "data/CycPeptMP.json"
+  },
+
+  "processing": {
+    "_description": "Data processing settings",
+    "output_dir": "temp_prediction",
+    "cleanup_temp": true,
+    "validate_smiles": true
+  },
+
+  "pipeline": {
+    "_description": "CycPeptMP pipeline components",
+    "extract_monomers": true,
+    "enumerate_smiles": true,
+    "generate_conformations": true,
+    "calculate_descriptors": true,
+    "predict_permeability": true
+  },
+
+  "output": {
+    "_description": "Output format and options",
+    "format": "csv",
+    "include_metadata": true,
+    "save_intermediate": false
+  },
+
+  "error_handling": {
+    "_description": "Error handling configuration",
+    "continue_on_warning": true,
+    "return_partial_results": true,
+    "known_aggregation_bug": true
+  }
+}

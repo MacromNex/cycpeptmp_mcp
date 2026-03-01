@@ -1,0 +1,24 @@
+{
+  "_description": "Configuration for cyclic peptide SMILES validation",
+  "_source": "Extracted from examples/use_case_2_validate_cyclic_peptide.py",
+
+  "molecular_weight": {
+    "_description": "Molecular weight warning thresholds for cyclic peptides",
+    "min_warning": 500,
+    "max_warning": 2000
+  },
+
+  "validation": {
+    "_description": "Validation checks to perform",
+    "check_cyclicity": true,
+    "check_peptide_elements": true,
+    "check_hbd": true
+  },
+
+  "output": {
+    "_description": "Output format and options",
+    "include_errors": true,
+    "include_warnings": true,
+    "save_canonical_smiles": true
+  }
+}
